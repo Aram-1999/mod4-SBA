@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Task Manager</h1>
+
+    <form id="taskForm">
+      <label for="task-name"> Task name: </label>
+      <input type="text" id="task-name" placeholder="laundry" required />
+      <br />
+      <label for="category">Category: </label>
+      <input type="text" id="category" placeholder="chores" required />
+      <br />
+      <label for="deadline">Deadline: </label>
+      <input type="date" id="deadline" required />
+      <br />
+      <label for="status">Status</label>
+      <select name="status" id="status">
+        <option value="In Progress">In Progress</option>
+        <option value="Completed">Completed</option>
+        <option value="Overdue">Overdue</option>
+      </select>
+      <br />
+      <br />
+      <button type="submit" id="addTask">Add Task!</button>
+    </form>
+
+    <div class="filters">
+      <button id="btnAll">All</button>
+      <button id="btnInProgress">In Progress</button>
+      <button id="btnCompleted">Completed</button>
+      <button id="btnOverdue">Overdue</button>
+      <input type="text" id="filterByCategory" placeholder="category" />
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Category</th>
+          <th>Deadline</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </body>
+</html>
